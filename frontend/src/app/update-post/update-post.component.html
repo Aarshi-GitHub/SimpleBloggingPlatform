@@ -1,0 +1,18 @@
+<app-header></app-header>
+<div class="wrapper">
+    <div class="text-center mt-4 name">
+        Update Blog
+    </div>
+    <form class="p-3 mt-3" (ngSubmit)="onSubmit(post)">
+        <div class="form-field d-flex align-items-center">
+            <input type="text" name="Title" placeholder="Title" [(ngModel)]="post.title">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <textarea name="content" rows="5" placeholder="Content" [(ngModel)]="post.content"></textarea>
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <input type="text" name="imageurl" placeholder="Image Url starting with https://" [(ngModel)]="post.imageurl">
+        </div>
+        <button class="btn mt-3" type="submit"> Update Blog </button>
+    </form>
+</div>

@@ -1,0 +1,17 @@
+<div class="wrapper">
+    <div class="text-center mt-4 name">
+        Blog App
+    </div>
+    <form class="p-3 mt-3" (ngSubmit)="onSubmit(user)">
+        <div class="form-field d-flex align-items-center">
+            <input type="text" name="username" placeholder="Username" [(ngModel)]="user.username">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <input type="password" name="password" placeholder="Password" [(ngModel)]="user.password">
+        </div>
+        <button class="btn mt-3" type="submit">Login</button>
+    </form>
+    <div class="text-center fs-6">
+         <a routerLink="/register" routerLinkActive="active">Register into account</a>
+    </div>
+</div>

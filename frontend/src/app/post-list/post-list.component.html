@@ -1,0 +1,18 @@
+<app-header></app-header>
+<section class="cards-wrapper">
+    <div class="card-grid-space" *ngFor="let post of posts">
+      <div class="card" style="--bg-img: url({{post.imageurl}})">
+        <div>
+          <h1>{{post.title}}</h1>
+          <p *ngIf="maxlength<post.content.length; else elseBlock">{{post.content.substring(0,maxlength)}}…</p>
+          <ng-template #elseBlock>{{post.content}}…</ng-template>
+          <div class="date">{{post.date | date:'medium'}}</div>
+          <div class="tags">
+            <a (click)="viewBlog(post.id)" class="tag">Read More</a>
+            <a (click)="deleteBlog(post.id)" class="tag">Delete</a>
+            <a (click)="updateBlog(post.id)" class="tag">Update</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

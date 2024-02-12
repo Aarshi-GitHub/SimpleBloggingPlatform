@@ -1,0 +1,15 @@
+<app-header></app-header>
+<div class="blog-details-wrapper">
+    <h2 class="title">
+        {{post.title}}
+    </h2>
+    <span class="date">Created at : {{post.date | date:'medium'}}</span>
+    <div>
+        <img src="{{post.imageurl}}"/>
+    </div>
+    <div class="content">
+        {{post.content}}
+    </div>
+    <div class="author">Created By : {{post.user?.username}}</div>
+    <button class="btn" (click)="goBack()">Go Back</button>
+</div>
